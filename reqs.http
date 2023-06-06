@@ -1,0 +1,87 @@
+
+# SIGN UP 
+POST http://localhost:3000/user/sign-up
+Content-Type: application/json
+
+{
+  "email":"anu@mail.com",
+  "userName":"anu",
+  "password":"anu",
+  "roleId":2
+}
+
+###
+
+# LOGIN
+POST http://localhost:3000/user/login
+Content-Type: application/json
+
+{
+  "email":"anu@mail.com",
+  "password":"anu"
+}
+
+###
+
+# ALL USERS
+GET http://localhost:3000/admin/allUsers
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2ODYwNTIxNTUsImV4cCI6MTY4NjA1OTM1NX0.0NUZqbcwp5P9e-3urDQMrGRaXnz266BwV7uPdNmM9R8
+
+###
+
+# ALL TASKS
+GET http://localhost:3000/admin/allTasks
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoiYWRtaW4iLCJpYXQiOjE2ODYwNTIxNTUsImV4cCI6MTY4NjA1OTM1NX0.0NUZqbcwp5P9e-3urDQMrGRaXnz266BwV7uPdNmM9R8
+
+###
+
+# ALL TASKS OF A USER
+GET http://localhost:3000/task/allTasks/4
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsImlhdCI6MTY4NjA1MjI0NCwiZXhwIjoxNjg2MDU5NDQ0fQ.pT_RJgwnKttKdlIa9p90r65PRdee50oRFbOAE_aYDJA
+
+###
+
+# ADD TASK
+POST http://localhost:3000/task/BackendApp
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsImlhdCI6MTY4NjA1MjI0NCwiZXhwIjoxNjg2MDU5NDQ0fQ.pT_RJgwnKttKdlIa9p90r65PRdee50oRFbOAE_aYDJA
+Content-Type: application/json
+
+{
+ "taskName":"BackendApp",
+ "userId":4
+}
+
+###
+
+#UPDATE TASK
+PUT http://localhost:3000/task/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsImlhdCI6MTY4NjA1MjI0NCwiZXhwIjoxNjg2MDU5NDQ0fQ.pT_RJgwnKttKdlIa9p90r65PRdee50oRFbOAE_aYDJA
+Content-Type: application/json
+
+{
+  "taskName":"backendapp"
+}
+
+###
+
+# TASK COMPLETED
+PUT http://localhost:3000/task/completedTask/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsImlhdCI6MTY4NjA0Njc1NywiZXhwIjoxNjg2MDUzOTU3fQ.qxDT2sBKwGGVVAVb23MNr9MH2F_WlNZ3iTkeSGpahtk
+
+###
+
+# ADD COMMENT
+POST http://localhost:3000/comment/1
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJyb2xlIjoidXNlciIsImlhdCI6MTY4NjA0Njc1NywiZXhwIjoxNjg2MDUzOTU3fQ.qxDT2sBKwGGVVAVb23MNr9MH2F_WlNZ3iTkeSGpahtk
+Content-Type: application/json
+
+{
+ "taskId":1,
+ "comment":"completed 50%" 
+}
+
+###
+
+
+
+
